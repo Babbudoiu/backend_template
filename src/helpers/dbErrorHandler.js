@@ -1,4 +1,4 @@
-const getErrorMessage = (err) => {
+exports.getErrorMessage = (err) => {
   let message = "";
   if (err.code) {
     switch (err.code) {
@@ -17,7 +17,7 @@ const getErrorMessage = (err) => {
   return message;
 };
 
-const getUniqueErrorMessage = (err) => {
+exports.getUniqueErrorMessage = (err) => {
   let output;
   try {
     let fieldName = err.message.substring(
@@ -33,4 +33,4 @@ const getUniqueErrorMessage = (err) => {
   return output;
 };
 
-export default { getErrorMessage };
+
